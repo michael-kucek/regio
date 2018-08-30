@@ -1,7 +1,7 @@
 <template>
   <div v-on:keydown="pause($event)">
     <h2>Cards</h2>
-    <money v-model="price" v-bind="money"></money>
+    <money v-model="price" v-bind="money" ref="moneybox"></money>
     <div class="timer" v-bind:class="{ isTyping: isTyping}" />
     <div class="card-container">
       <div class="card-list" v-for="(transaction, index) in transactions" :key="transaction.card">
@@ -78,6 +78,7 @@ export default {
     },
     changeCardType(i) {
       this.cardType = i;
+      this.$refs.moneybox.$el.focus();
     },
     deleteCharge(cardType, key) {
       this.transactions[cardType].charges =
