@@ -1,7 +1,10 @@
 <template>
   <div id="app">
     <h1>reggio</h1>
+    <hr />
+
     <Cards/>
+    <hr />
     <Cash />
   </div>
 </template>
@@ -22,7 +25,7 @@ export default {
 
 <style>
 #app {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
+  font-family: "Lucida Console";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
@@ -33,5 +36,11 @@ h1 {
 }
 img {
   max-height: 1em;
+}
+hr {
+  border: 0;
+  height: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
 </style>

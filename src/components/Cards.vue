@@ -1,6 +1,6 @@
 <template>
-  <div v-on:keydown="pause($event)">
-    <h2>Cards</h2>
+  <div v-on:keydown="pause($event)" class="holder">
+    <h2>cards</h2>
     <money v-model="price" v-bind="money" ref="moneybox"></money>
     <div class="timer" v-bind:class="{ isTyping: isTyping}" />
     <div class="card-container">
@@ -101,6 +101,7 @@ input {
   display: flex;
   justify-content: space-around;
   flex-wrap: nowrap;
+  font-size: 1.2em;
 }
 .card-container > div {
   font-family: "Lucida Console";

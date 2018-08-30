@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <h2>Cash</h2>
+  <div class="holder">
+    <h2>cash</h2>
     <div class="cash-container">
       <div class="cash-denomination">
         <div>$100s</div>
@@ -90,6 +90,8 @@ export default {
 <style>
 input {
   padding: 0.5em;
+  font-family: "Lucida Console";
+
   width: 30%;
   font-size: 16px;
   background: #edfafa;
