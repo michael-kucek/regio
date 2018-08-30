@@ -4,52 +4,52 @@
     <div class="cash-container">
       <div class="cash-denomination">
         <div>$100s</div>
-        <input v-model="hundreds" />
+        <input type="tel" v-model="hundreds" />
         <p>${{hundreds * 100}}</p>
       </div>
       <div class="cash-denomination">
         <div>$50s</div>
-        <input v-model="fifties" />
+        <input type="tel" v-model="fifties" />
         <p>${{fifties * 50}}</p>
       </div>
       <div class="cash-denomination">
         <div>$20s</div>
-        <input v-model="twenties" />
+        <input type="tel" v-model="twenties" />
         <p>${{twenties * 20}}</p>
       </div>
       <div class="cash-denomination">
         <div>$10s</div>
-        <input v-model="tens" />
+        <input type="tel" v-model="tens" />
         <p>${{tens * 10}}</p>
       </div>
       <div class="cash-denomination">
         <div>$5s</div>
-        <input v-model="fives" />
+        <input type="tel" v-model="fives" />
         <p>${{fives * 5}}</p>
       </div>
       <div class="cash-denomination">
         <div>$1s</div>
-        <input v-model="ones" />
+        <input type="tel" v-model="ones" />
         <p>${{ones}}</p>
       </div>
       <div class="cash-denomination">
         <div>¢25s</div>
-        <input v-model="quarters" />
+        <input type="tel" v-model="quarters" />
         <p>${{quarters === 0 ? 0 : (quarters * 0.25).toFixed(2)}}</p>
       </div>
       <div class="cash-denomination">
         <div>¢10s</div>
-        <input v-model="dimes" />
+        <input type="tel" v-model="dimes" />
         <p>${{dimes === 0 ? 0 : (dimes * 0.1).toFixed(2)}}</p>
       </div>
       <div class="cash-denomination">
         <div>¢5s</div>
-        <input v-model="nickels" />
+        <input type="tel" v-model="nickels" />
         <p>${{nickels === 0 ? 0 : (nickels * 0.05).toFixed(2)}}</p>
       </div>
       <div class="cash-denomination">
         <div>¢1s</div>
-        <input v-model="pennies" />
+        <input type="tel" v-model="pennies" />
         <p>${{pennies === 0 ? 0 : (pennies * 0.01).toFixed(2)}}</p>
       </div>
     </div>

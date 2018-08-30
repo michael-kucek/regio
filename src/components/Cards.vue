@@ -32,8 +32,8 @@ export default {
       isTyping: false,
       transactions: [
         { card: 'visa', charges: [] },
-        { card: 'mastercard', charges: [] },
-        { card: 'discover', charges: [] },
+        { card: 'mc', charges: [] },
+        { card: 'amex', charges: [] },
         { card: 'other', charges: [] },
       ],
       time: null,
