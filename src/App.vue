@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <h1>regio</h1>
+    <h1>reggio</h1>
     <Cards/>
     <Cash />
   </div>
