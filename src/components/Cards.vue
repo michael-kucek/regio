@@ -1,7 +1,9 @@
 <template>
   <div v-on:keydown="pause($event)" class="holder">
     <h2>cards</h2>
-    <money v-model="price" v-bind="money" ref="moneybox"></money>
+    <span class="input" v-bind:class="{ isTyping: isTyping}">
+      <money v-model="price" v-bind="money" ref="moneybox"></money>
+    </span>
     <div class="timer" v-bind:class="{ isTyping: isTyping}" />
     <div class="card-container">
       <div class="card-list" v-for="(transaction, index) in transactions" :key="transaction.card">
@@ -50,6 +52,7 @@ export default {
   },
   methods: {
     pause(event) {
+      this.isTyping = true;
       if (event.key === 'v' || event.key === 'V') {
         this.cardType = 0;
       }
@@ -94,8 +97,34 @@ input {
   padding: 0.5em;
   width: 60%;
   font-size: 25px;
-  background: #edfafa;
+  font-family: inherit;
+  line-height: inherit;
+  color: #2e3750;
+  min-width: 12em;
   border: none;
+
+  border-radius: inherit;
+}
+
+.input {
+  position: relative;
+  font-size: 1.5em;
+  background: linear-gradient(90deg, #5aadda, #e06262);
+  background-size: 400% 400%;
+
+  padding: 3px;
+  display: inline-block;
+  border-radius: 9999em;
+}
+.input > input {
+  position: relative;
+  display: inherit;
+  border-radius: inherit;
+  margin: 0;
+  border: none;
+  outline: none;
+  padding: 0 0.325em;
+  z-index: 1;
 }
 .card-container {
   display: flex;
@@ -132,7 +161,19 @@ input {
   font-size: 25px;
 }
 .isTyping {
-  animation: bounce 2s linear 0s infinite;
+  /* animation: bounce 2s linear 0s infinite; */
+  animation: rotate 2s ease infinite;
+}
+@keyframes rotate {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 @keyframes bounce {
   0% {
